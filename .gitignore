@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Environments
+venv/
+.env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# MacOS
+.DS_Store
+
+# Experiment outputs
+outputs/
+results/
+figures/
+checkpoints/
+*.pt
+*.pth
+*.npy
+*.csv
