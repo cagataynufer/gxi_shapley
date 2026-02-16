@@ -1,0 +1,12 @@
+trial_name: zero_baseline
+trial_long_name: Faithfulness vs coalition size (zero baseline, original model F)
+baseline_identity: b = 0 (x-space)
+model_identity_for_phi: original model F(x)
+
+Definitions:
+Err(S) = |F(x_S) - Fhat(x_S)| / (|F(x_S)| + eps(S))
+eps(S) = 0.01 * |F(x_S)| + 1e-12
+Per-input, per-k mean error E_x(k) = mean_{|S|=k} Err(S)
+Across-input mean/std per k computed over E_x(k)
+Input-level WinRate(k) = frac_x [E_x_main+int(k) < E_x_main(k)]
+Per-input relative improvement RI_x = (E_main - E_main+int) / (E_main + 1e-12)

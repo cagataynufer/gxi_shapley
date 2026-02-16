@@ -1,0 +1,22 @@
+GXI-Shapley text illustration (NLI, CLS-centered)
+sample_key: nli_contradiction_contextual
+target_feature: CLS (index 0)
+premise: The plan sounded good on paper.
+hypothesis: The plan was a complete failure in practice.
+
+ token_index_j    token  shapley_influence_on_CLS
+             8    [SEP]                  0.001202
+            18    [SEP]                  0.000991
+             2     plan                 -0.000898
+            16 practice                  0.000878
+            12        a                  0.000751
+             0    [CLS]                 -0.000738
+            14  failure                  0.000629
+            17        .                  0.000575
+            15       in                  0.000292
+             1      the                  0.000242
+             4     good                 -0.000235
+             6    paper                 -0.000231
+            11      was                 -0.000220
+             7        .                 -0.000179
+             3  sounded                  0.000122
