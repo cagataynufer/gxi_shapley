@@ -13,9 +13,23 @@ The work introduces a derivative-informed Shapley framework that integrates coal
 ## Repository Structure
 
 ```
-experiments/     → Quantitative empirical studies
-illustration/    → Image and text modality demonstrations
-src/             → Core GXI framework implementation
+experiments/    → Quantitative empirical studies (faithfulness, surrogate evaluation)
+illustration/   → Image and text modality demonstrations
+src/            → Core Gradient×Input (GXI) Shapley framework implementation
+
+### src/ overview
+src/gxi/        → GXI game definition + attribution computation
+                 - game.py: feature-specific GXI Shapley game payoff
+                 - attribution_matrix_computer.py: computes Φ
+                 - model_adapter.py: wraps black-box models for differentiable evaluation
+
+src/masking/    → Baseline masking + modality-specific masking utilities
+                 - base.py: shared masking interface
+                 - image.py / text.py / tabular.py: modality-specific masking
+
+src/data/       → Data loading / generation utilities used by experiments
+src/models/     → Model definitions used in experiments (MLP, CNN, etc.)
+src/utils/      → Training and experiment utilities (training scripts, helpers)
 ```
 
 All commands below are executed **from the repository root**.
