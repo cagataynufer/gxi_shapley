@@ -19,8 +19,8 @@ src/            → Core Gradient×Input (GXI) Shapley framework implementation
 
 ### src/ overview
 src/gxi/        → GXI game definition + attribution computation
-                 - game.py: feature-specific GXI Shapley game payoff
-                 - attribution_matrix_computer.py: computes Φ
+                 - game.py: the main game class
+                 - attribution_matrix_computer.py: computes attribution matrix
                  - model_adapter.py: wraps black-box models for differentiable evaluation
 
 src/masking/    → Baseline masking + modality-specific masking utilities
